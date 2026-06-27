@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Users\\Arshina\\Desktop\\task-manager\\backend\\logs\\.8cf685b16142f24aad60d6ccdda805ff77600652-audit.json",
+    "files": [
+        {
+            "date": 1782508174225,
+            "name": "C:\\Users\\Arshina\\Desktop\\task-manager\\backend\\logs\\application-2026-06-27.log",
+            "hash": "bcdd99122e253bb30b67151f362137a0a3f783bc2398c88ccf888169d2b7a6cc"
+        }
+    ],
+    "hashType": "sha256"
+}
