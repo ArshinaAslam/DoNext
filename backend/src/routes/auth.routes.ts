@@ -1,0 +1,17 @@
+import { Router } from "express";
+import { container } from "tsyringe";
+import { AsyncHandler } from "../middleware/asyncHandler";
+import { AuthController } from "../controllers/auth.controller";
+import { authenticateToken } from "../middleware/auth.middleware";
+
+const router = Router();
+
+const authController = container.resolve(AuthController);
+
+router.post("/signup", AsyncHandler(authController.signup.bind(authController)));
+router.post("/login", AsyncHandler(authController.login.bind(authController)));
+router.post("/refresh-token", AsyncHandler(authController.refreshToken.bind(authController)));
+router.get("/me", authenticateToken, AsyncHandler(authController.getCurrentUser.bind(authController)));
+router.post("/logout", authenticateToken, AsyncHandler(authController.logout.bind(authController)));
+
+export default router;

@@ -11,3 +11,10 @@ export interface TaskResponseDto {
 export interface TaskResultDto {
   task: TaskResponseDto;
 }
+
+export interface GetTasksResultDto {
+  tasks: TaskResponseDto[];
+  total: number;
+  page: number;
+  limit: number;
+}
